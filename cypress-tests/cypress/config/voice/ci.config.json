@@ -1,0 +1,14 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000,
+  "env": {
+    "environment": "local",
+    "frontend": "http://localhost:3001",
+    "backend": "http://localhost:3000",
+    "smallViewportWidthBreakpoint": 414
+  },
+  "video": false,
+  "supportFile": "support/index.ts",
+  "pluginsFile": "plugins/index.js"
+}

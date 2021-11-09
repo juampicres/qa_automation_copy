@@ -1,0 +1,12 @@
+{
+  "Amount Due- Device": {
+    "Device Breakdown": {
+      "Discover Device Amount": "Which device would you like the payoff amount on?",
+      "Line Breakdown": "The remaining balance for the line ending in xxxx is $___. This includes a monthly service charge of $____, and a recurring device charge of $____.",
+      "Discover Device Intent": "Were you looking to upgrade your device, or is there any other reason you would like the payoff amount that I may be able to assist you with?"
+    },
+    "Device Selection (Upgrade)": {},
+    "Checkout (Upgrade)": {},
+    "Recap": {}
+  }
+}

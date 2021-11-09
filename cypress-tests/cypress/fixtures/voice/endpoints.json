@@ -1,0 +1,5 @@
+{
+  "LoginPageLocal": "127.0.0.1:3000/api/users/sign_in",
+  "LoginPageStaging": "https://att.staging.voice.hiper.io/api/users/sign_in",
+  "TestEngageWebhook": "https://att.staging.voice.hiper.io/api/v1/test_engage_webhook"
+}

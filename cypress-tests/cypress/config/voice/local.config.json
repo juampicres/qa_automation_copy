@@ -1,0 +1,14 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000,
+  "env":{
+    "environment": "local",
+    "frontend": "http://localhost:3001",
+    "backend": "http://localhost:3000",
+    "smallViewportWidthBreakpoint": 414
+  },
+  "integrationFolder": "../cypress-tests/cypress/integration/voice",
+  "supportFile": "../cypress-tests/cypress/support/index.ts",
+  "fixturesFolder": "../cypress-tests/cypress/fixtures/voice"
+}

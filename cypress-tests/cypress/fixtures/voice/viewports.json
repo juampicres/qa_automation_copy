@@ -1,0 +1,10 @@
+{
+  "small": {
+    "viewportHeight": 639,
+    "viewportWidth": 360
+  },
+  "large": {
+    "viewportHeight": 1280,
+    "viewportWidth": 720
+  }
+}

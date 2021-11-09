@@ -1,0 +1,40 @@
+version: "3.2"
+x-app_config: &app_config
+  image: hiper_annotation:cypress
+  environment:
+    REDIS_URL: redis://redis:6379/0
+    SIDEKIQ_URL: redis://redis:6379/1
+    CABLE_URL: redis://redis:6379/2
+    RAILS_ENV: e2e_test
+  depends_on:
+    - db
+    - redis
+    - webpack
+services:
+  webpack:
+    <<: *app_config
+    depends_on: []
+    command: [ './bin/webpack', '--watch', '--colors', '--progress', '--mode=development' ]
+    logging:
+      driver: none
+  backend:
+    <<: *app_config
+    ports:
+      - "3701:3701"
+    command: ["sh", "cypress/backend_entrypoint.sh"]
+  db:
+    image: postgres:11.4-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+  redis:
+    image: redis:alpine
+    command: ["redis-server"]
+  cypress:
+    image: cypress:annotation
+    network_mode: host
+    environment:
+      - DISPLAY
+    working_dir: /qa_automation/tests
+    command: ["cypress", "run", "--config-file", "ci.config.json"]

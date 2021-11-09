@@ -1,0 +1,16 @@
+pep8==1.7.1
+Pillow==8.0.0
+pycodestyle==2.6.0
+pyflakes==2.2.0
+pynput==1.7.1
+pyspellchecker==0.5.5
+python-dateutil==2.8.1
+robotframework==3.2.2
+robotframework-imaplibrary==0.3.0
+robotframework-pabot==1.10.0
+#robotframework-python3==2.9
+robotframework-pythonlibcore==2.1.0
+robotframework-requests==0.7.1
+robotframework-selenium2library==3.0.0
+robotframework-seleniumlibrary==4.5.0
+PyAutoGUI~=0.9.52

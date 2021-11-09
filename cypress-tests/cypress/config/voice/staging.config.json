@@ -1,0 +1,11 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000,
+  "environment": "staging",
+  "env":{
+    "frontend": "https://att.staging.voice.hiper.io",
+    "backend": "https://att.staging.voice.hiper.io",
+    "smallViewportWidthBreakpoint": 414
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 10000,
+  "environment": "production",
+  "env":{
+    "frontend": "https://att.voice.hiper.io",
+    "backend": "http://localhost:3000",
+    "smallViewportWidthBreakpoint": 414
+  }
+}

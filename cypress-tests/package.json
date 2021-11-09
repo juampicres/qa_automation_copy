@@ -1,0 +1,32 @@
+{
+  "name": "cypress-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:annotation:local": "cypress open --config-file cypress/config/annotation/annotation.local.config.json",
+    "cy:voice:ci": "cypress run --config-file ci.config.json",
+    "cy:voice:local": "cypress open --config-file cypress/config/voice/local.config.json",
+    "cy:voice:staging": "cypress open --config-file cypress/config/voice/staging.config.json",
+    "cy:prod": "cypress open --config-file cypress/config/voice/production.config.json",
+    "format": "eslint --fix .",
+    "lint": "eslint . --ext .js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.22.6",
+    "cypress": "^8.7.0"
+  },
+  "devDependencies": {
+    "@applitools/types": "^1.0.15",
+    "@types/cypress": "^1.1.3",
+    "@types/node": "^14.17.32",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-cypress": "^2.12.1",
+    "typescript": "^4.4.4"
+  }
+}

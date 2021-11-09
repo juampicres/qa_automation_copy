@@ -1,0 +1,10 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 60000,
+  "baseUrl": "http://localhost:3701",
+  "integrationFolder": "cypress/integration",
+  "supportFile": "cypress/support/index.js",
+  "fixturesFolder": "cypress/fixtures/",
+  "video": false
+}

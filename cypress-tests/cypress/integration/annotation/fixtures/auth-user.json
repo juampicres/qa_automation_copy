@@ -1,0 +1,30 @@
+{
+  "analystUser":
+    {
+      "email": "analyst@testing.com",
+      "password": "Testing123",
+      "username": "Analyst User",
+      "factoryName": "analyst_user"
+    },
+  "annotatorUser":
+    {
+      "email": "annotator@testing.com",
+      "password": "Testing123",
+      "username": "Annotator User",
+      "factoryName": "annotator_user"
+    },
+  "managerUser":
+    {
+      "email": "manager@testing.com",
+      "password": "Testing123",
+      "username": "Manager User",
+      "factoryName": "manager_user"
+    },
+  "adminUser":
+    {
+      "email": "admin@testing.com",
+      "password": "Testing123",
+      "username": "Admin User",
+      "factoryName": "admin_user"
+    }
+}

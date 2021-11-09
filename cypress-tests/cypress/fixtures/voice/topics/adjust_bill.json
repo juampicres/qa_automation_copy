@@ -1,0 +1,11 @@
+{
+  "Adjust Bill": {
+    "Confirm Billing Intent": {
+      "Confirm Billing Intent": "While I'm pulling up your account, can you tell me more about the specific issue you're experiencing today?",
+      "Transition": "Thank you! I am looking in your account now."
+    },
+    "Adjust Bill- General": {},
+    "Sales Transition": {},
+    "Recap": {}
+  }
+}
