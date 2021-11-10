@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage("Running Performance Suite") {
             steps {
-                sh 'cd gatling/bin'
-                sh 'ls'
-                sh 'gatling-ec2.sh'
+                dir("gatling/bin"){
+                    sh 'ls'
+                    sh 'gatling-ec2.sh'
+                }
             }
             post {
                 always {
