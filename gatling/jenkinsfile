@@ -5,7 +5,7 @@ pipeline {
             steps {
                 dir("gatling/bin"){
                     sh 'ls'
-                    sh 'gatling-ec2.sh'
+                    sh 'sh gatling-ec2.sh'
                 }
             }
             post {
