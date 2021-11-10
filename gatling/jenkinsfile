@@ -8,6 +8,7 @@ pipeline {
         stage("Build Maven") {
             steps {
                 dir("gatling"){
+                   sh 'echo ${MAVEN_HOME}'
                    sh 'mvn -B clean package'
                 }
             }
@@ -18,7 +19,7 @@ pipeline {
             }
             post {
                 always {
-                    gatlingArchive()
+                        gatlingArchive()
                 }
             }
         }
