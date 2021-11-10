@@ -1,10 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage("Run Gatling") {
+        stage("Running Performance Suite") {
             steps {
                 sh 'cd gatling/bin'
-                sh 'sh gatling:test'
+                sh 'sh gatling-ec2.sh'
             }
             post {
                 always {
