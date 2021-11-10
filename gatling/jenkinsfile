@@ -1,13 +1,15 @@
 pipeline {
     agent any
     environment {
-        MAVEN_HOME = "/usr/local/maven"
+        MAVEN_HOME = "/opt/maven"
+        PATH = "${MAVEN_HOME}/bin"
     }
     stages {
         stage("Build Maven") {
             steps {
                 dir("gatling"){
-                   sh 'echo MAVEN_HOME is set to: ${MAVEN_HOME}'
+                   sh 'echo ${MAVEN_HOME}'
+                   sh 'echo ${PATH}'
                    sh 'mvn -B clean package'
                 }
             }
