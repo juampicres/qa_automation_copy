@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage("Run Gatling") {
+            steps {
+                sh 'cd gatling/bin'
+                sh 'sh gatling:test'
+            }
+            post {
+                always {
+                    gatlingArchive()
+                }
+            }
+        }
+    }
+}
