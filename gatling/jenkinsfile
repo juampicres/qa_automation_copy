@@ -4,6 +4,8 @@ pipeline {
         stage("Build Maven") {
             steps {
                 dir("gatling"){
+                    sh 'export MAVEN_HOME=/opt/maven'
+                    sh 'export PATH=$PATH:$MAVEN_HOME/bin'
                     sh 'mvn -B clean package'
                 }
             }
