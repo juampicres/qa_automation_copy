@@ -1,13 +1,16 @@
 pipeline {
     agent any
     stages {
+        stage("Build Maven") {
+            steps {
+                dir("gatling"){
+                    sh 'mvn -B clean package'
+                }
+            }
+        }
         stage("Running Performance Suite") {
             steps {
-                dir("gatling/bin"){
-                    sh 'ls'
-                    sh 'sh gatling-ec2.sh'
-                     sh '1'
-                }
+                sh 'mvn gatling:test'
             }
             post {
                 always {
