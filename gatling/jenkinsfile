@@ -1,5 +1,43 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven 3.x'
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
+        stage("Build Maven") {
+            steps {
+                dir("gatling") {
+                    sh "pwd"
+                    sh "ls"
+                    sh 'mvn clean package'
+                }
+            }
+        }
+        stage("Running Performance Suite") {
+            steps {
+                dir("gatling") {
+                    sh "pwd"
+                    sh 'mvn gatling:test'
+                }
+            }
+            post {
+                always {
+                        gatlingArchive()
+                }
+            }
+        }
+    }
+}
+/*pipeline {
+    agent any
     environment {
         MAVEN_HOME = "/opt/maven"
         PATH = "${MAVEN_HOME}/bin"
@@ -25,4 +63,4 @@ pipeline {
             }
         }
     }
-}
+}*/
